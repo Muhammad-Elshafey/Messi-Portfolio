@@ -1,0 +1,306 @@
+@font-face{
+    font-family: myFont;
+    src: url(../Fonts/PermanentMarker-Regular.ttf);
+  }
+  @font-face{
+    font-family: myFont1;
+    src: url(../Fonts/RubikMonoOne-Regular.ttf);
+  }
+  @font-face{
+    font-family: myFont2;
+    src: url(../Fonts/UnicaOne-Regular.ttf);
+  }
+  @font-face{
+    font-family: fontCairo;
+    src: url(../Fonts/Cairo/Cairo-VariableFont_slnt\,wght.ttf);
+  }
+  @font-face{
+    font-family: fontBangers;
+    src: url(../Fonts/Bangers/Bangers-Regular.ttf);
+  }
+  @font-face{
+    font-family: fontBlack;
+    src: url(../Fonts/Montserrat_Alternates/MontserratAlternates-Black.ttf);
+  }
+  @font-face{
+    font-family: myfont3;
+    src: url(../Fonts/Rubik_Spray_Paint/RubikSprayPaint-Regular.ttf);
+  }
+  @font-face{
+    font-family: myfont4;
+    src: url(../Fonts/Darker_Grotesque/DarkerGrotesque-Regular.ttf);
+  }
+  @font-face{
+    font-family: myfont5;
+    src: url(../Fonts/Fonts/Bayon-Regular.ttf);
+  }
+
+
+html{
+    scroll-behavior: smooth;
+  }
+  
+  
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    
+}
+
+
+body{
+    /* background-color: ; */
+    font-family: "Open Sans", sans-serif;
+    background-color: #040404;
+    color: #fff;
+    position: relative;
+    background: transparent; 
+    background-image: url("../Photos/lionel-messi-fifa-world-cup-2022-trophy-winner-4k-wallpaper-uhdpaper.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+}
+@media (min-width: 1024px) {
+    body::before {
+    background-attachment: fixed;
+    }
+}
+/* Nav bar */
+.navbarmenu{
+    background: rgba(0, 0, 0, 0.466);
+}
+/* End Nav bar */
+/* Start Header  */
+#header{
+    width: 100%;
+    height: 100vh;
+    transition: ease-in-out 0.8s;
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 997;
+    overflow-y: auto;
+    
+}
+#header * {
+    transition: ease-in-out 1s;
+  }
+
+#header h1 {
+    font-size: 57px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 700;
+    font-family: myFont;
+    text-transform: uppercase;
+  }
+#header h1 a,
+#header h1 a:hover {
+  font-size: larger;
+  color: #ffffff;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+}
+#header h2 {
+    font-size: 43px;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: myFont2;
+  }
+/* End Header  */
+
+/* Start Matches */
+section {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    top: 140px;
+    bottom: 100%;
+    opacity: 0;
+    transition: ease-in-out 0.4s;
+    z-index: 2;
+  }
+  
+section.section-show {
+    top: 100px;
+    bottom: auto;
+    opacity: 1;
+    padding-bottom: 45px;
+}
+
+section .container {
+    background: rgba(0, 0, 0, 0.466);
+    padding: 30px;
+}
+
+.Argentina{
+    float: right;
+    text-align: right;
+}
+
+
+.Matches{
+    display: none;
+}
+
+.Matches .container .Match .result{
+    font-size: 70px;
+    margin: auto;
+    text-align: center;
+    font-family: fontBangers;
+    color: bisque;
+    
+}
+.Matches .container .Match .planty{
+    font-size: 35px;
+    margin: auto;
+    text-align: center;
+    font-family: fontBangers;
+    color: rgba(255, 228, 196, 0.841);
+}
+.Matches .container .Match .date{
+    margin: auto;
+    font-size: 20px;
+    text-align: center;
+    font-family: fontcairo;
+    font-weight: bold;
+    color: rgba(221, 221, 221, 0.806);
+}
+.Matches .container .Match .TName{
+    font-family: fontblack;
+    margin-top: 10px;
+    color: wheat;
+}
+
+.iconARG{
+    margin-right: 30px;
+}
+
+#p{
+    display: none;
+}
+
+.ButtonMatch{
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer; 
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Match 2 */
+#p1{
+    display: none;
+
+}
+/* Match 3 */
+#p2{
+    display: none;
+
+}
+/* Match 4 */
+#p4{
+    display: none;
+}
+/* Match 5 */
+#p5{
+    display: none;
+}
+/* Match 6 */
+#p6{
+    display: none;
+}
+/* Match 7 */
+#p7{
+    display: none;
+}
+/* End Matches */
+
+
+/* Start Editing */
+
+
+/* End Editing */
+
+/* Start Players */
+.counts {
+    padding: 70px 0 60px;
+  }
+  .StatsCount{
+    transition: 0.7s;
+  }
+  
+  .counts .count-box {
+    padding: 30px 30px 25px 30px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.466);
+  }
+  .StatsCount:hover{
+    transform: scale(1.1);
+  }
+  
+/* End Players */
+
+
+
+
+
+
+
+
+
+
+
+/* Scroll Bar */
+::-webkit-scrollbar{
+    width: 15px;
+  }
+  ::-webkit-scrollbar-track{
+    background-color: rgb(0, 0, 0) ;
+    
+  }
+  ::-webkit-scrollbar-thumb{
+    background-color: darkgray;
+    border-radius: 2cm;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover{
+    background-color: lightgray;
+  }
+  /* End Scroll Bar */
+  
+  /* Select Text */
+  ::-moz-selection { /* Code for Firefox */
+    color: rgb(0, 0, 0);
+    background: lightgray;
+  }
+  ::selection {
+    color: rgb(0, 0, 0);
+    background: lightgray;
+  }
+  /* End Select Text */
+  
+  
+  #scrollToTop
+  {
+      cursor:pointer;
+      display:inline-block;
+      height:40px;
+      color:#fff;
+      font-size:16pt;
+      text-align:center;
+      text-decoration:none;
+      line-height:40px;
+      background-color: #000000;
+      width: 100%;
+  }

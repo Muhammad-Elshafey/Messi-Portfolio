@@ -1,0 +1,792 @@
+@font-face{
+  font-family: myFont;
+  src: url(../Fonts/PermanentMarker-Regular.ttf);
+}
+@font-face{
+  font-family: myFont1;
+  src: url(../Fonts/RubikMonoOne-Regular.ttf);
+}
+@font-face{
+  font-family: myFont2;
+  src: url(../Fonts/UnicaOne-Regular.ttf);
+}
+@font-face{
+  font-family: fontCairo;
+  src: url(../Fonts/Cairo/Cairo-VariableFont_slnt\,wght.ttf);
+}
+@font-face{
+  font-family: fontBangers;
+  src: url(../Fonts/Bangers/Bangers-Regular.ttf);
+}
+@font-face{
+  font-family: fontBlack;
+  src: url(../Fonts/Montserrat_Alternates/MontserratAlternates-Black.ttf);
+}
+@font-face{
+  font-family: myfont3;
+  src: url(../Fonts/Rubik_Spray_Paint/RubikSprayPaint-Regular.ttf);
+}
+@font-face{
+  font-family: myfont4;
+  src: url(../Fonts/Darker_Grotesque/DarkerGrotesque-Regular.ttf);
+}
+@font-face{
+  font-family: myfont5;
+  src: url(../Fonts/Fonts/Bayon-Regular.ttf);
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    
+}
+
+
+body{
+     /* background-color: ; */
+     font-family: "Open Sans", sans-serif;
+     background-color: #040404;
+     color: #fff;
+     position: relative;
+     background: transparent; 
+     background-image: url("../Photos/Untitled.png");
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+     width: 100%;
+     height: 100vh;
+     background-attachment: fixed;
+}
+@media (min-width: 1024px) {
+    body::before {
+      background-attachment: fixed;
+    }
+  }
+  a {
+    color: #18d26e;
+    text-decoration: none;
+  }
+
+
+/* header */
+#header{
+    width: 100%;
+    height: 100vh;
+    transition: ease-in-out 0.8s;
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 997;
+    overflow-y: auto;
+    
+}
+#header * {
+    transition: ease-in-out 1s;
+  }
+
+#header h1 {
+    font-size: 48px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 700;
+    font-family: myFont;
+    text-transform: uppercase;
+  }
+#header h1 a,
+#header h1 a:hover {
+  font-size: larger;
+  color: #cfb53b;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+}
+#header h2 {
+    font-size: 43px;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: myFont2;
+  }
+
+  /* #header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } */
+  /*new navbar*/
+  .Navbar-Menu{
+background-color: #000000;
+
+  }
+  .Navbar-Menu .nav-link {
+    color: white;
+  }
+  /*new navbar*/
+
+
+  /*NavBar  /
+.navbar {
+    padding: 0;
+    position: relative;
+}
+.HeadingBar{
+  background-color: #000000;
+}
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    ;
+}
+.navbar li {
+    position: relative;
+  }
+  
+.navbar li+li {
+    margin-left: 30px;
+  }
+  .navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.navbar a i,
+.navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.navbar a:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: rgb(94, 94, 253);
+  visibility: hidden;
+  width: 0px;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.navbar a:hover:before,
+.navbar li:hover>a:before,
+.navbar .active:before {
+  visibility: visible;
+  width: 25px;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+  color: #fff;
+}
+/* End Nav */
+/* Mobile Nav /
+.mobile-nav-toggle {
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  line-height: 0;
+  transition: 0.5s;
+  position: fixed;
+  right: 15px;
+  top: 15px;
+}
+
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+}
+
+.navbar-mobile {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  transition: 0.3s;
+  z-index: 999;
+  margin-top: 0;
+}
+
+.navbar-mobile .mobile-nav-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.navbar-mobile ul {
+  display: block;
+  position: absolute;
+  top: 55px;
+  right: 15px;
+  bottom: 45px;
+  left: 15px;
+  padding: 10px 0;
+  overflow-y: auto;
+  transition: 0.3s;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.navbar-mobile li {
+  padding: 12px 20px;
+}
+
+.navbar-mobile li+li {
+  margin: 0;
+}
+
+.navbar-mobile a,
+.navbar-mobile a:focus {
+  font-size: 16px;
+  position: relative;
+}
+
+
+
+/ End Mobile Nav */
+
+/* Nav World Cup */
+
+/* End Nav World Cup */
+
+/* Social Media */
+#header .social-links {
+    margin-top: 40px;   
+    display: flex;
+  }
+  
+  #header .social-links a {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    line-height: 1;
+    margin-right: 8px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+  }
+  
+  #header .social-links .facebook:hover {
+    background: #4267B2;
+    transition: 0.6s;
+
+  }
+  #header .social-links .instagram:hover {
+    background-image: linear-gradient(#4f5bd5, #962fbf,#d62976,#fa7e1e,#feda75); 
+    transition: 0.6s;
+
+ }
+  #header .social-links .twitter:hover {
+    background: #1DA1F2;
+    transition: 0.6s;
+  }
+
+
+
+  
+  @media (max-width: 992px) {
+    #header h1 {
+      font-size: 36px;
+    }
+  
+    #header h2 {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  
+    #header .social-links {
+      margin-top: 15px;
+    }
+}
+/* end Social media */
+/* header-top */
+/* #header.header-top {
+  height: 80px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+#header.header-top .social-links,
+#header.header-top h2 {
+  display: none;
+}
+
+#header.header-top h1 {
+  margin-right: auto;
+  font-size: 36px;
+}
+
+#header.header-top .container {
+  display: flex;
+  align-items: center;
+}
+
+#header.header-top .navbar {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  #header.header-top {
+    height: 60px;
+  }
+
+  #header.header-top h1 {
+    font-size: 26px;
+  }
+} */
+/* End header-top */
+/* Start Sections */
+section {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  top: 140px;
+  bottom: 100%;
+  opacity: 0;
+  transition: ease-in-out 0.4s;
+  z-index: 2;
+}
+
+section.section-show {
+  top: 100px;
+  bottom: auto;
+  opacity: 1;
+  padding-bottom: 45px;
+}
+
+section .containerr {
+  background: rgba(0, 0, 0, 0.466);
+  padding: 30px;
+}
+
+@media (max-width: 768px) {
+  section {
+    top: 120px;
+  }
+
+  section.section-show {
+    top: 80px;
+  }
+}
+/* End Sections */
+/* Biography Title */
+.section-title h1 {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  line-height: 1px;
+  margin: 0 0 20px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #aaaaaa;
+  font-family: "Poppins", sans-serif;
+}
+
+.section-title h1::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background: rgb(94, 94, 253);
+  margin: 4px 10px;
+}
+/* End Biography Title */
+/* Start About Messi */
+.containerr .About-Messi{
+  text-align: center;
+  font-family: myFont1;
+  font-size: 40px;
+  color: #fcc09fc2;
+}
+/* End About Messi */
+
+/* start football player */
+
+.containerr .content{
+  margin-top: 125px;
+}
+.containerr .content h3{
+  color: rgba(94, 94, 253, 0.648);
+  /* background: -webkit-linear-gradient(#6D6027,#D3CBB8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  font-weight: 700;
+  font-size: 26px;
+  margin-bottom: 30px;
+  font-family: myfont1;
+
+}
+.containerr .content ul{
+  list-style: none;
+  padding: 0;
+  font-family: fontCairo;
+  font-size: 23px;
+  letter-spacing: 2px;
+  
+}
+.containerr .content ul li{
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+.containerr .content ul strong {
+  margin-right: 10px;
+  color: #d13c3c;
+}
+.containerr .content ul i {
+  font-size: 16px;
+  margin-right: 5px;
+  color: #18d26e;
+  line-height: 0;
+}
+.containerr .content p:last-child {
+  margin-bottom: 0;
+}
+/* end football player */
+
+/* Start About Messi */
+.containerr .About-Messi{
+  margin-top: 72px;
+}
+.containerr .who-img{
+  margin-left: 150px;
+}
+/* End About Messi */
+/* Start Who Is Messi?*/
+.About .containerr .Biopra{
+  font-family: fontcairo;
+  font-size: 23px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+/* End Who Is Messi?*/
+
+/* Counter */
+.counts {
+  padding: 70px 0 60px;
+}
+.StatsCount{
+  transition: 0.7s;
+}
+
+.counts .count-box {
+  padding: 30px 30px 25px 30px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.08);
+}
+.StatsCount:hover{
+  transform: scale(1.1);
+}
+
+
+.counts .count-box span {
+  font-size: 36px;
+  display: block;
+  font-weight: 600;
+  color: #fff;
+}
+.counts .count-box p {
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+}
+.Remarkable{
+  font-size: 50px;
+  font-family: myfont1;
+  text-align: center;
+  color: #fcc09fc2;
+}
+
+.Remarkable2{
+  margin-top: 50px;
+}
+
+/* End Counter */
+
+/* Start Historical Moments */
+.hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 2px solid #fcc09f90;
+  width: 50%;
+  margin:30px auto 30px auto;
+}
+.HistoricalMoments .containerr .title-Historical{
+  font-family: fontBangers;
+  font-size: 50px;
+  color: #cba04b;
+  letter-spacing: 2px;
+}
+.HistoricalMoments .containerr .date{
+  font-family: myfont4;
+  margin-top: -20px;
+  letter-spacing: 2px;
+  /* font-size:30px; */
+}
+.HistoricalMoments .containerr .HistoricalParagraph{
+  font-family: fontCairo;
+  font-size: 23px;
+  letter-spacing: 1px;
+}
+/* End Historical Moments */
+/* Start Achievements */
+.Navbar-Achievements{
+  background-color: rgba(94, 94, 253, 0.343);
+  width: 60%;
+  margin: auto;
+}
+.Navbar-Achievements a{
+  color: white;
+}
+.navbar-light .ulMenu2 .nav-link{
+  color: white;
+}
+/* End Nav Achievements */
+
+/* start FC BARCELONA */
+.BR{
+  text-align: center;
+}
+.BARCELONA{
+  text-align: center; 
+  font-size: 70px;
+  font-family: fontBangers;
+
+}
+.containerr .FcBARCELONA{
+  background: -webkit-linear-gradient(#DB0030,#004D98);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+}
+.containerr .PSG{
+  background: -webkit-linear-gradient(#005ea1,#FFFFFF,#DA291C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.containerr .ARG{
+  background: -webkit-linear-gradient(#389bf1,#FFFFFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* Start Text  BARCELONA*/
+.HrBr{
+  border-top:2px solid #DB0030 ;
+}
+.BRtx h4,.BRtx p{
+  color: rgb(212, 36, 41);
+  font-weight: bold;
+}
+.BRtx h4 span{
+  color:#005ea1 ;
+}
+
+/* End Text  BARCELONA*/
+/* Start PSG */
+.HrPSG{
+  border-top:2px solid #004170 ;
+}
+.PSGtx h4 ,.PSGtx p{
+  color: #a0d5fb;
+  font-weight: bold;
+}
+.PSGtx h4 span{
+  color: #e54f44b5;
+}
+
+/* End PSG */
+
+
+/* Hr Arg */
+.HrAr{
+  border-top: 2px solid rgba(19,212,237,1);
+}
+/* end hr arg */
+/* Arg Text */
+.ArTx h4 , .ArTx p{
+  color: #00d0c6;
+  font-weight: bold;
+}
+.ArTx h4 span{
+  color:wheat;
+}
+
+/*End Arg Text */
+
+
+/* end FC BARCELONA*/
+
+/* Start INDIVIDUAL */
+.HrIn{
+  border-top: 2px solid #e0a731;
+}
+
+/* End INDIVIDUAL */
+
+
+/* RECORDSRow */
+.RECORDSRow .unOrder{
+  font-size: 21px;
+  font-family: fontBlack;
+  font-weight: 100;
+  margin-left: 40px;
+}
+
+/*End RECORDSRow */
+
+
+/* End Achievements */
+/* Start Last Section */
+.LastSection .containerr{
+ background-color:  hsl(210,8%,15%);
+  
+}
+.EndHr{
+  border: none;
+  border-left:1px solid hsla(200, 10%, 50%,100);
+  height: auto;
+  width:1px;   
+}
+.logo img{
+margin-left: 10px;
+}
+.Names{
+  font-family: myfont5;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+#last .social-links {
+  margin-top: 40px;   
+  display: flex;
+}
+
+#last .social-links a {
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  line-height: 1;
+  margin-right: 8px;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+#last .social-links .facebook:hover {
+  background: #4267B2;
+  transition: 0.6s;
+
+}
+#last .social-links .instagram:hover {
+  background-image: linear-gradient(#4f5bd5, #962fbf,#d62976,#fa7e1e,#feda75); 
+  transition: 0.6s;
+
+}
+#last .social-links .twitter:hover {
+  background: #1DA1F2;
+  transition: 0.6s;
+}
+
+/* End Last Section */
+
+
+/* Start Footer */
+footer{
+  background-color: #000000;
+  margin-top: 10px;
+  height: 90px;
+  width: 100%;
+}
+footer p{
+  margin-top: 40px;
+  text-align: center;
+}
+/* End Footer */
+
+/* Scroll Bar */
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-track{
+  background-color: rgb(0, 0, 0) ;
+  
+}
+::-webkit-scrollbar-thumb{
+  background-color: darkgray;
+  border-radius: 2cm;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: lightgray;
+}
+/* End Scroll Bar */
+
+/* Select Text */
+::-moz-selection { /* Code for Firefox */
+  color: rgb(0, 0, 0);
+  background: lightgray;
+}
+::selection {
+  color: rgb(0, 0, 0);
+  background: lightgray;
+}
+/* End Select Text */
+
+
+#scrollToTop
+{
+    cursor:pointer;
+    display:inline-block;
+    height:40px;
+    color:#fff;
+    font-size:16pt;
+    text-align:center;
+    text-decoration:none;
+    line-height:40px;
+    background-color: #000000;
+    width: 100%;
+}
